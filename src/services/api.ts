@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 //const API_URL = 'http://localhost:5000/api/entity';
-const API_URL = 'https://realmapagent.onrender.com/api/entity' ;
+const BASE_URL = 'https://realmapagent.onrender.com/api/entity' ;
 
 interface Entity {
     _id: string;
@@ -11,7 +11,8 @@ interface Entity {
     pricePerSqft: number;
 }
 
-export const fetchEntities = () => axios.get(API_URL);
-export const createEntity = (data: Entity) => axios.post(API_URL, data);
-export const updateEntity = (id: string, data: Entity) => axios.put(`${API_URL}/${id}`, data);
-export const deleteEntity = (id: string) => axios.delete(`${API_URL}/${id}`);
+
+export const fetchEntities = () => axios.get(BASE_URL);
+export const createEntity = (data: Omit<Entity, '_id'>) => axios.post(BASE_URL, data);
+export const updateEntity = (id: string, data: Omit<Entity, '_id'>) => axios.put(`${BASE_URL}/${id}`, data);
+export const deleteEntity = (id: string) => axios.delete(`${BASE_URL}/${id}`);

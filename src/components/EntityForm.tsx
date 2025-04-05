@@ -32,7 +32,7 @@ export default function EntityForm({ onSuccess }: Props) {
       </div>
       <div className="flex-1">
         <label className="block text-sm font-medium text-gray-700">Total Sqft</label>
-        <input type="number" name="totalSqftAvailable" value={form.totalSqftAvailable} onChange={handleChange} className="input p-2 rounded border w-full" placeholder="Total Sqft" required />
+        <input type="number" name="totalSqftAvailable" value={form.totalSqftAvailable } onChange={handleChange} className="input p-2 rounded border w-full" placeholder="Total Sqft" required />
       </div>
       <div className="flex-1">
         <label className="block text-sm font-medium text-gray-700">Price/Sqft</label>
