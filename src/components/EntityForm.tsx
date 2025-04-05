@@ -21,12 +21,24 @@ export default function EntityForm({ onSuccess }: Props) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 mb-4">
-      <input type="text" name="name" value={form.name} onChange={handleChange} className="input" placeholder="Name" required />
-      <input type="text" name="location" value={form.location} onChange={handleChange} className="input" placeholder="Location" required />
-      <input type="number" name="totalSqftAvailable" value={form.totalSqftAvailable} onChange={handleChange} className="input" placeholder="Total Sqft" required />
-      <input type="number" name="pricePerSqft" value={form.pricePerSqft} onChange={handleChange} className="input" placeholder="Price/Sqft" required />
-      <button type="submit" className="btn">Add</button>
+    <form onSubmit={handleSubmit} className="bg-white p-4 rounded shadow flex flex-col gap-4 sm:flex-row sm:items-end mb-6">
+      <div className="flex-1">
+        <label className="block text-sm font-medium text-gray-700">Name</label>
+        <input type="text" name="name" value={form.name} onChange={handleChange} className="input p-2 rounded border w-full " placeholder="Name" required />
+      </div>
+      <div className="flex-1">
+        <label className="block text-sm font-medium text-gray-700">Location</label>
+        <input type="text" name="location" value={form.location} onChange={handleChange} className="input p-2 rounded border w-full " placeholder="Location" required />
+      </div>
+      <div className="flex-1">
+        <label className="block text-sm font-medium text-gray-700">Total Sqft</label>
+        <input type="number" name="totalSqftAvailable" value={form.totalSqftAvailable} onChange={handleChange} className="input p-2 rounded border w-full" placeholder="Total Sqft" required />
+      </div>
+      <div className="flex-1">
+        <label className="block text-sm font-medium text-gray-700">Price/Sqft</label>
+        <input type="number" name="pricePerSqft" value={form.pricePerSqft} onChange={handleChange} className="input p-2 rounded border w-full " placeholder="Price/Sqft" required />
+      </div>
+      <button type="submit" className="btn bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded mt-4 sm:mt-0">Add</button>
     </form>
   );
 }
