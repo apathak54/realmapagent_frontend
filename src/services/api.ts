@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const  BASE_URL = 'http://localhost:5000/api/entity';
-//const BASE_URL = 'https://realmapagent.onrender.com/api/entity' ;
+//const  BASE_URL = 'http://localhost:5000/api/entity';
+const BASE_URL = 'https://realmapagent.onrender.com/api/entity' ;
 
 interface Entity {
     _id: string;
